@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Listado de Carros Electriticos</h2>
+@foreach(var item in Model){
+    <a asp-action="VerCarros" asp-all-route-id="@item.Id">
+        <h3>@item.Marca</h3>
+    </a>
+    <p>@item.Model</p>
+}
